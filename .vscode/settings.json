@@ -3,8 +3,30 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "files.associations": {
-    "*.css": "postcss"
+
+  "editor.quickSuggestions": {
+    "strings": true
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+
+
+  //----------------------------
+  // Tailwind related.
+  //----------------------------
+    "files.associations": {
+      "*.css": "tailwindcss"
+    },
+    "tailwindCSS.experimental.configFile": "tailwind.config.ts",
+    "tailwindCSS.experimental.classRegex": [
+      [
+        "ui:\\s*{([^)]*)\\s*}",
+        "[\"'`]([^\"'`]*).*?[\"'`]"
+      ]
+    ],
+    "tailwindCSS.classAttributes": [
+      "class",
+      "className",
+      "ngClass",
+      "ui"
+    ],
 }

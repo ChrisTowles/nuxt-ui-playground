@@ -1,12 +1,13 @@
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@nuxthq/ui',
     '@vueuse/nuxt',
-    '@unocss/nuxt',
+
     '@pinia/nuxt',
-    '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
   ],
 
@@ -18,13 +19,9 @@ export default defineNuxtConfig({
     renderJsonPayloads: true,
     typedPages: true,
   },
-
-  css: [
-    '@unocss/reset/tailwind.css',
-  ],
-
-  colorMode: {
-    classSuffix: '',
+  ui: {
+    global: true,
+    icons: ['mdi', 'simple-icons'],
   },
 
   nitro: {
